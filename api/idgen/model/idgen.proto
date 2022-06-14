@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package idgen;
+
+message IdResponse {
+    string uuid = 1;
+}
+
+message IdRequest {}
+
+service IdGen {
+    rpc GetNextId(IdRequest) returns (IdResponse);
+}
