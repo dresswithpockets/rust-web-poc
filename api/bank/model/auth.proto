@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package auth;
+
+import "google/protobuf/empty.proto";
+
+message CreateUserRequest {
+  string phone = 1;
+  string password = 2;
+}
+
+message CreateUserResponse {
+  string uuid = 1;
+  string refresh = 2;
+}
+
+message RefreshBody {
+  string refresh = 1;
+}
+
+message GrantResponse {
+  string new_refresh = 1;
+  string access = 2;
+}
+
+service Auth {
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+  rpc Handshake(RefreshBody) returns (RefreshBody);
+  rpc Grant(RefreshBody) returns (GrantResponse);
+  rpc Invalidate(RefreshBody) returns (google.protobuf.Empty);
+}
