@@ -9,7 +9,7 @@ Make sure you've got all the [prerequisites](#Prerequisites) setup in your local
 1. Install native build tools & debugger
    - On Windows, install Visual Studio 2022 with the C++ tools and Windows 10 SDK options.
    - On macOS, install the latest version of XCode with the relevant C++ build tools.
-   - On linux, install the latest C++ dev tools via your package manager. There are toolchains for both gnu and musl.
+   - On linux, install the latest C++ dev tools via your package manager. There are rust toolchains for both gnu and musl, so pick your poison.
 2. Install libpq
    - On Windows
      1. Install [vcpkg](https://vcpkg.io/en/getting-started.html)
