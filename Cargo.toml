@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "api/bank",
+    "api/idgen",
+
+    "lib/data",
+    "lib/snowflake",
+]
